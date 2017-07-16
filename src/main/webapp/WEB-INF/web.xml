@@ -4,9 +4,9 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
     
-  <welcome-file-list>
+  <!--<welcome-file-list>
         <welcome-file>form.jsp</welcome-file>
-    </welcome-file-list>
+    </welcome-file-list>-->
 	
 	<display-name>Spring MVC Application</display-name>
 	<servlet>

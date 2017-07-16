@@ -9,20 +9,27 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 @Controller
-@RequestMapping("/")
+@RequestMapping("/index")
 public class StudentController {
 
-    @RequestMapping("/index")
+   /* @RequestMapping("/index")
     ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
         return modelAndView;
     }
-    
+    */
     @ResponseBody
     @RequestMapping("/hello")
     String Hello()
     {
         return "Hello world";
+    }
+
+    @RequestMapping("/hellomodel")
+    ModelAndView helloModel(){
+        ModelAndView model= new ModelAndView("index");
+        model.addObject("msg","hello World");
+        return model;
     }
 }
 

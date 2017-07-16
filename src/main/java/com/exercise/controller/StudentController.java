@@ -9,16 +9,17 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
+
 @Controller
 public class StudentController {
 
+
     @RequestMapping("/{firstName}/{lastName}")
-    public ModelAndView method(@PathVariable("firstName") String fn, @PathVariable("lastName") String ln){
+    @ResponseBody
+    public String method(@PathVariable() Map<String,String> name){
 
-        ModelAndView modelAndView=new ModelAndView("index");
-        modelAndView.addObject("msg","Hello "+fn+" "+ln);
-        return modelAndView;
+        return "Hello "+name.get("firstName")+" "+name.get("lastName");
     }
-
 }
 

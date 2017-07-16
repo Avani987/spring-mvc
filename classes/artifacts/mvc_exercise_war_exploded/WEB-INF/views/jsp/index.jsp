@@ -3,6 +3,6 @@
 <html>
 <body>
     <h1>Q1</h1>
-    <h2>${welcomeMessage}</h2>
+    <h2>This is jsp page</h2>
 </body>
 </html>
